@@ -6,7 +6,11 @@
   </head>
 
   <body>
-    <h1>Hi, I'm Lil. This is my Guessing Game!</h1>
+    <header align = "center",>
+
+    <h1 style = "font-family: Helvetica; sans-serif; color: #bfbfbf">Hi, I'm Lil. This is my Guessing Game!</h1>
+
+    <hr>
 
     <script>
       var userName = prompt("Hello! What\'s your name?");
@@ -16,7 +20,8 @@
       alert("Let's play a game, " + userName + "! I'll tell you something about me. You guess 'true' or 'false'.");
 
       var userAnswer = prompt("When I was in college, I was a cake decorator.");
-      if (userAnswer == "true") {
+
+      if (userAnswer.toLowerCase() == "true") {
       alert("You are right! They hired me because I knew cursive!");
       console.log("response: correct");
 
@@ -26,14 +31,16 @@
       }
     </script>
 
+    <h3 style="font-family:Helvetica; sans-serif">TRUE. When I was in college, I was a cake decorator.</h3>
+    <p style="font-family:Helvetica; sans-serif; color:#bfbfbf"><i>This was a part-time job while I was in school. Mostly it was birthday cakes, but occasionally I got wedding cake orders, too.</i></p>
     <img src = "http://prod-cdn.thekrazycouponlady.com/wp-content/uploads/2015/06/wedding-cake.png" width="400px"/>
-    <p><i>I was a cake decorator while I was in school. Mostly it was birthday cakes, but occasionally I got wedding cake orders, too.</i></p>
 
-    <hl />
+    <hr>
 
     <script>
       var userAnswer = prompt("My favorite color is black.");
-      if (userAnswer == "true") {
+
+      if (userAnswer.toLowerCase() == "true") {
       alert("You are right! It's my favorite color (until they make something darker)!");
       console.log("response: correct");
 
@@ -43,19 +50,21 @@
       }
     </script>
 
+    <h3 style="font-family:Helvetica; sans-serif">TRUE. My favorite color is black.</h3>
+    <p style="font-family:Helvetica; sans-serif; color:#bfbfbf"><i>Black is my go-to color. I really like having a daily uniform.</i></p>
     <img src = "https://twoward.files.wordpress.com/2015/11/headtotoeblack1.jpg" width="400px" />
-    <p><i>Black is my go-to color. I really like having a daily uniform.</i></p>
 
-    <hl />
+    <hr>
 
     <script>
       var userAnswer = prompt("I plan to move away from Seattle someday.");
-      if (userAnswer == "false") {
+
+      if (userAnswer.toLowerCase() == "false") {
       alert("Seattle is my home! I'm here to stay.");
       console.log("response: correct");
 
       } else {
-      alert("Nope! I love it here!");
+      alert("Nope! I love it here and I'm not leaving!");
       console.log("response: incorrect");
       }
 
@@ -63,9 +72,12 @@
 
     </script>
 
+    <h3 style="font-family:Helvetica; sans-serif">FALSE. I am here to stay! You would have to forcibly remove me.</h3>
+    <p style="font-family:Helvetica; sans-serif; color:#bfbfbf"><i>I can't believe I live here! So dreamy!</i></p>
     <img src = "http://cloud2.wsbcdn.com/blog/wp-content/uploads/2011/09/patrickgenesee.jpg" width="400px" />
-    <p><i>I can't believe I live here! So dreamy!</i></p>
 
-    <hl />
+    <hr>
+  </header>
+
   </body>
 </html>
