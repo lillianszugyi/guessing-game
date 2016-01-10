@@ -2,12 +2,70 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Guessing Game Demo</title>
+    <title>Guessing Game</title>
   </head>
+
   <body>
-    <h1>Hello World!</h1>
-    <p>
-      My name is Lillian.
-    </p>
+    <h1>Hi, I'm Lil. This is my Guessing Game!</h1>
+
+    <script>
+      var userName = prompt("Hello! What\'s your name?");
+      alert("Hi, " + userName + "! Nice to meet you.");
+      console.log("userName variable: " + userName);
+
+      alert("Let's play a game, " + userName + "! I'll tell you something about me. You guess 'true' or 'false'.");
+
+      var userAnswer = prompt("When I was in college, I was a cake decorator.");
+      if (userAnswer == "true") {
+      alert("You are right! They hired me because I knew cursive!");
+      console.log("response: correct");
+
+      } else {
+      alert("Aww, your answer is incorrect. I was totally a cake decorator in 2004!");
+      console.log("response: incorrect");
+      }
+    </script>
+
+    <img src = "http://prod-cdn.thekrazycouponlady.com/wp-content/uploads/2015/06/wedding-cake.png" width="400px"/>
+    <p><i>I was a cake decorator while I was in school. Mostly it was birthday cakes, but occasionally I got wedding cake orders, too.</i></p>
+
+    <hl />
+
+    <script>
+      var userAnswer = prompt("My favorite color is black.");
+      if (userAnswer == "true") {
+      alert("You are right! It's my favorite color (until they make something darker)!");
+      console.log("response: correct");
+
+      } else {
+      alert("Aww, your answer is incorrect. That's okay...you don't know me yet.");
+      console.log("response: incorrect");
+      }
+    </script>
+
+    <img src = "https://twoward.files.wordpress.com/2015/11/headtotoeblack1.jpg" width="400px" />
+    <p><i>Black is my go-to color. I really like having a daily uniform.</i></p>
+
+    <hl />
+
+    <script>
+      var userAnswer = prompt("I plan to move away from Seattle someday.");
+      if (userAnswer == "false") {
+      alert("Seattle is my home! I'm here to stay.");
+      console.log("response: correct");
+
+      } else {
+      alert("Nope! I love it here!");
+      console.log("response: incorrect");
+      }
+
+      alert("Thanks for playing, " + userName + "! Hope you learned something new about me!");
+
+    </script>
+
+    <img src = "http://cloud2.wsbcdn.com/blog/wp-content/uploads/2011/09/patrickgenesee.jpg" width="400px" />
+    <p><i>I can't believe I live here! So dreamy!</i></p>
+
+    <hl />
   </body>
 </html>
