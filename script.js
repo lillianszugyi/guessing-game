@@ -5,24 +5,24 @@
 //
 //
 //
-// function game(x, y) {
-//   var ques = prompt(questions[i]).toLowerCase();
-//   if (ques === answers[i]) {
-//     document.write("<p>You got it right!</p>");
-//     correct++;
-//
-//   } else {
-//     document.write('<p>You got it wrong!</p>');
-//   }
-// }
-//
-// for (var i = 0; i < questions.length; i += 1) {
-//   game(questions[i], answers[i]);
-// }
-//
-// function sayHi() {
-//   var hiTest = prompt("This is a test.  Say Hi");
-//   document.write(hiTest);
+function game(x, y) {
+  var ques = prompt(questions[i]).toLowerCase();
+  if (ques === answers[i]) {
+    document.write("<p>You got it right!</p>");
+    correct++;
+
+  } else {
+    document.write('<p>You got it wrong!</p>');
+  }
+}
+
+for (var i = 0; i < questions.length; i += 1) {
+  game(questions[i], answers[i]);
+}
+
+function sayHi() {
+  var hiTest = prompt("This is a test.  Say Hi");
+  document.write(hiTest);
 // }
 //
 // sayHi();
