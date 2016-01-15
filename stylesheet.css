@@ -1,0 +1,43 @@
+body {
+  background-color: #05070E;
+	font-family: 'Helvetica', sans-serif;
+  height: 100%;
+}
+
+h1 {
+  color: white;
+}
+
+h3 {
+    color: #A46B5B;
+}
+
+
+p {
+	color: #A46B5B;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+a:hover {
+  color: #65736F;
+}
+
+a:active {
+  color: white;
+}
+
+#footer {
+  color: #A2A69E;
+  font-size: 12px;
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+}
