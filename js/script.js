@@ -18,10 +18,11 @@ var response;
 var correct = [];
 var incorrect = [];
 
-function print(message) {
-  var outputDiv = document.getElementById('output');
+function print(message, id) {
+  var outputDiv = document.getElementById(id);
   outputDiv.innerHTML = message;
 }
+
 
 function buildList(arr) {
   var listHTML = '<ol>';
