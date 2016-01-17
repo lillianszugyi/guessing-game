@@ -1,15 +1,27 @@
-var userName = prompt("Hi there! What's your name?");
-  alert("Hey " + userName + ". Nice to meet you. Let's get started.");
-  console.log("variable userName: " + userName);
+// var userName = prompt("Hi there! What's your name?");
+//   alert("Hey " + userName + ". Nice to meet you. Let's get started.");
+//   console.log("variable userName: " + userName);
+
+var response1;
+var response2;
+var response3;
+var response4;
+var response5;
+var response6;
 
 var questions = [
-  {question: "Was I a cake decorator while I was in college?", answer: "yes"},
-  {question: "What is my favorite color?", answer: "black"},
-  {question: "Do I plan to move out of Seattle someday?", answer: "no"},
-  {question: "How many years did I play the flute?", answer: "15"},
-  {question: "I do CrossFit and I just hit a PR on my one rep max deadlift. Can you guess how much weight I lifted in pounds?", answer: "225"},
-  {question: "I love taking photos. What is my favorite subject?", answer: "dogs"}
-];
+  [ "Was I a cake decorator while I was in college?", "yes", response1 ],
+  [ "What is my favorite color?", "black", response2 ],
+  [ "Do I plan to move out of Seattle someday?", "no", response3 ],
+  [ "How many years did I play the flute?", "15", response4 ],
+  [ "I do CrossFit and I just hit a PR on my one rep max deadlift. Can you guess how much weight I lifted in pounds?", "225", response5 ],
+  [ "I love taking photos. What is my favorite subject?", "dogs", response6]
+]
+
+// Loop to fill in questions in the page
+for (i=0; i < questions.length; i++){
+  document.getElementById("q"+(i+1)).innerHTML = questions[i][0];
+}
 
 var correctAnswers = 0;
 var question;
