@@ -18,8 +18,8 @@ var response;
 var correct = [];
 var incorrect = [];
 
-function print(message) {
-  var outputDiv = document.getElementById("output");
+function print(message, id) {
+  var outputDiv = document.getElementById(id);
   outputDiv.innerHTML = message;
 }
 
@@ -52,4 +52,4 @@ html += "<h3>You got these questions correct:</h3>";
 html += buildList(correct);
 html += "<h3>You got these questions incorrect:</h3>";
 html += buildList(incorrect);
-print(html, q1);
+print(html, "output");
