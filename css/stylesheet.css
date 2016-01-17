@@ -1,11 +1,15 @@
 body {
-  background-color: #05070E;
+  background-color: #F5F5F5;
 	font-family: 'Helvetica', sans-serif;
   height: 100%;
 }
 
 h1 {
-  color: white;
+  color: #332C29;
+}
+
+h2 {
+  color: #A46B5B;
 }
 
 h3 {
@@ -14,23 +18,19 @@ h3 {
 
 
 p {
-	color: #A46B5B;
+	color: #332C29;
 }
 
 a:link {
-  color: white;
+  color: #332C29;
 }
 
 a:visited {
-  color: white;
+  color: #332C29;
 }
 
 a:hover {
   color: #65736F;
-}
-
-a:active {
-  color: white;
 }
 
 #footer {
