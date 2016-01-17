@@ -7,3 +7,4 @@ This is a game that people can play in order to know me better.
 3. Ask user to guess number-related question and help them get to the right number by giving hints, e.g. "too high, too low"
 
 ### Created by Lillian Szugyi
+with lots of help from Matthew https://github.com/muddybeard210 and Thomas https://github.com/thomasphillips3.
