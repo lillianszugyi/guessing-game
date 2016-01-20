@@ -1,62 +1,59 @@
-var userName = prompt("Before we get started - what\'s your name?");
-  // var el = document.getElementById('welcome').innerHTML TODO something wrong with code. Want to print to document.
-  // "Thanks " + userName + ". Nice to meet you, and good luck!";
+var userName = prompt("Before we get started, please tell me your name.");
   console.log("userName: " + userName);
 
+function welcome () {
+  var welcomeEl = document.getElementById("welcome");
+  welcomeEl.innerHTML = "Thanks, " + userName + ". Let's play!";
+}
 
+var counter = 0;
+var question;
+var answer;
+var img;
+var userAnswer;
+var questionEl;
+var answerEl;
+var endEl;
 
-// // Loop to fill in questions in the page
-// for (i=0; i < questions.length; i++){
-//   document.getElementById("q"+(i+1)).innerHTML = questions[i][0];
-// }
-//
-// var correctAnswers = 0;
-// var question;
-// var answer;
-// var response;
-// var correct = [];
-// var incorrect = [];
-//
-// function print(message, id) {
-//   var outputDiv = document.getElementById(id);
-//   outputDiv.innerHTML = message;
-// }
-//
-//
-// function buildList(arr) {
-//   var listHTML = '<ol>';
-//     for (var i = 0; i < arr.length; i += 1) {
-//       listHTML += '<li>' + arr[i] + '</li>';
-//     }
-//     listHTML += '</ol>';
-//     return listHTML;
-// }
-//
-// for (var i = 0; i < questions.length; i += 1) {
-//   question = questions[i].question;
-//   answer = questions[i].answer;
-//   // response = prompt(question).toLowerCase();
-//   if (response === answer) {
-//     correctAnswers += 1;
-//     correct.push(question);
-//     console.log("response: correct");
-//   } else {
-//     incorrect.push(question);
-//     console.log("response: incorrect");
-//   }
-// }
-//
-// function question1 () {
-//   var userAnswer = document.getElementById('res1');
-//   console.log("q1 function");
-// }
-//
-// var imgEl = document.getElementById('img1');
-// imgEl.src = "img/black.jpg";
-//
-// html = "You got " + correctAnswers + " question(s) right.";
-// // html += "<h3>You got these questions correct:</h3>";
-// // html += buildList(correct);
-// // html += "<h3>You got these questions incorrect:</h3>";
-// // html += buildList(incorrect);
-// print(html, "output");
+var data = [
+  {question: "Was I a cake decorator during college?", answer: "yes", img: "img/cake.jpg"},
+  {question: "What is my favorite color?", answer: "black", img: "img/black.jpg"},
+  {question: "Am I planning to move away from Seattle?", answer: "no", img: "img/seattle.jpg"},
+  {question: "I was a classically trained flutist. Can you guess how many years I played?", answer: "15", img: "img/symphony.jpg"},
+  {question: "I recently hit a deadlift PR. Can you guess how much I lifted in pounds?", answer: "225", img: "img/crossfit.jpg"},
+  {question: "I love taking photos. What is my favorite subject?", answer: "dogs", img: "img/dogs.jpg"},
+];
+
+function questions () {
+  for (var i = 0; i < data.length; i += 1) {
+
+    question = data[i].question;
+    questionEl = document.getElementById("q" + i);
+    questionEl.textContent = question;
+
+    userAnswer = prompt(data[i].question).toLowerCase();
+    answer = data[i].answer;
+    img = data[i].img;
+
+    answerEl = document.getElementById("a" + i);
+    if (userAnswer === answer) {
+      counter += 1;
+      console.log("response: correct");
+      answerEl.innerHTML =
+        "<p>You answered: " + userAnswer + ".</p>" +
+        "<p>That's right!</p>" +
+        "<img class=\"img\" src=\"" + img + "\" />";
+    } else {
+      console.log("response: incorrect");
+      answerEl.innerHTML =
+        "<p>You answered: " + userAnswer + ".</p>" +
+        "<p>That's incorrect!</p>" +
+        "<img class=\"img\" src=\"" + img + "\" />";
+    }
+  }
+endEl = document.getElementById("end");
+endEl.innerHTML = "Thanks for playing, " + userName + "! You got " + counter + " right out of 6 questions.";
+}
+
+welcome();
+questions();
